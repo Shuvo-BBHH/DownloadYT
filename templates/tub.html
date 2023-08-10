@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        /* Light mode styles */
+        .light-mode {
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #000000;
+            color: #f0f0f0;
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        p {
+            font-size: 16px;
+        }
+        /* Adjust text and background color in dark mode */
+        .dark-mode p, .dark-mode label, .dark-mode h2, .dark-mode h3, .dark-mode textarea {
+            color: #f0f0f0;
+            background-color: #000000;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</head>
+<body class="light-mode">
+    <h1>YouTube Downloader</h1>
+    <button onclick="toggleDarkMode()">Dark Mode</button>
+    <form method="POST" action="/">
+        <label for="mahdi_TY_url">Enter YouTube URL:</label>
+        <input type="text" name="mahdi_TY_url" required><br>
+        <br>
+        <label for="action">Select Typs:</label>
+        <select name="action">
+            <option value="video">Video</option>
+            <option value="mp3">MP3</option>
+        </select><br>
+        <button type="submit">Download</button>
+    </form>
+    {% if modified_text %}
+        <h2>Downloading...........</h2>
+        <p>{{ titel }}</p>
+        <p>{{ modified_text }}</p>
+    {% endif %}
+
+
+
+ <!-- Link to Font Awesome for icons -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <style>
+     /* Footer styles */
+     footer {
+         background-color: #333;
+         color: white;
+         padding: 20px;
+         text-align: center;
+     }
+
+     footer p {
+         margin: 10px 0;
+     }
+
+     .social a {
+         color: white;
+         text-decoration: none;
+         margin: 0 10px;
+     }
+
+     .social i {
+         font-size: 24px;
+     }
+
+     .end {
+         font-size: 12px;
+     }
+ </style>
+
+<body>
+    <br><br>
+ <footer style="background-color: black;">
+     <p style="color: yellow;">MAHDI HASAN SHUVO</p>
+     <p></p>
+     <div class="social">
+         <a href="https://www.facebook.com/bk4human"><i class="fab fa-facebook-f"></i></a>
+         <a href="https://www.instagram.com/shuvo_bbhh"><i class="fab fa-instagram"></i></a>
+         <a href="https://github.com/Shuvo-BBHH"><i class="fab fa-dribbble"></i></a>
+     </div>
+     <br>
+     <p class="end">Copyright By Mahdi HASAN SHUVO</p>
+ </footer>
+</body>
+</html>
